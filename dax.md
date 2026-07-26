@@ -36,9 +36,9 @@ Used in 3 places: the KPI card on page one (company-wide), the KPI card on the d
 
 ```dax
 Cummulative headcount = 
-    VAR currentDate = LASTDATE(staff_data[Date of Join])
+    VAR currentDate = LASTDATE(HR_data[Date of Join])
 RETURN
-    CALCULATE([Headcount], ALL(staff_data[Date of Join]),staff_data[Date of Join]<= currentDate)
+    CALCULATE([Headcount], ALL(HR_data[Date of Join]),HR_data[Date of Join]<= currentDate)
 ```
 
 ### Drill-through dynamic title
